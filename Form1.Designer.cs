@@ -38,18 +38,20 @@
             lblTimer = new Label();
             tmrCountdown = new System.Windows.Forms.Timer(components);
             lblIntrebariRamase = new Label();
+            lblCorecte = new Label();
+            lblGresite = new Label();
             SuspendLayout();
             // 
             // lblIntrebare
             // 
             lblIntrebare.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lblIntrebare.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIntrebare.Location = new Point(292, 115);
+            lblIntrebare.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblIntrebare.ImageAlign = ContentAlignment.TopLeft;
+            lblIntrebare.Location = new Point(175, 121);
             lblIntrebare.Name = "lblIntrebare";
-            lblIntrebare.Size = new Size(403, 66);
+            lblIntrebare.Size = new Size(643, 194);
             lblIntrebare.TabIndex = 0;
             lblIntrebare.Text = "Intrebare";
-            lblIntrebare.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnInapoi
             // 
@@ -106,7 +108,7 @@
             // lblTimer
             // 
             lblTimer.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTimer.Location = new Point(411, 18);
+            lblTimer.Location = new Point(399, 18);
             lblTimer.Name = "lblTimer";
             lblTimer.Size = new Size(175, 69);
             lblTimer.TabIndex = 10;
@@ -122,17 +124,39 @@
             // 
             lblIntrebariRamase.AutoSize = true;
             lblIntrebariRamase.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIntrebariRamase.Location = new Point(248, 37);
+            lblIntrebariRamase.Location = new Point(41, 37);
             lblIntrebariRamase.Name = "lblIntrebariRamase";
             lblIntrebariRamase.Size = new Size(172, 30);
             lblIntrebariRamase.TabIndex = 11;
             lblIntrebariRamase.Text = "intrebari ramase";
+            // 
+            // lblCorecte
+            // 
+            lblCorecte.AutoSize = true;
+            lblCorecte.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblCorecte.Location = new Point(804, 18);
+            lblCorecte.Name = "lblCorecte";
+            lblCorecte.Size = new Size(143, 21);
+            lblCorecte.TabIndex = 12;
+            lblCorecte.Text = "Raspunsuri Corecte";
+            // 
+            // lblGresite
+            // 
+            lblGresite.AutoSize = true;
+            lblGresite.Font = new Font("Segoe UI", 11.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblGresite.Location = new Point(804, 67);
+            lblGresite.Name = "lblGresite";
+            lblGresite.Size = new Size(127, 20);
+            lblGresite.TabIndex = 13;
+            lblGresite.Text = "Raspunsuri Gresite";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1028, 620);
+            Controls.Add(lblGresite);
+            Controls.Add(lblCorecte);
             Controls.Add(lblIntrebariRamase);
             Controls.Add(lblTimer);
             Controls.Add(btnInainte);
@@ -158,5 +182,7 @@
         private Label lblTimer;
         public System.Windows.Forms.Timer tmrCountdown;
         private Label lblIntrebariRamase;
+        private Label lblCorecte;
+        private Label lblGresite;
     }
 }

@@ -25,7 +25,7 @@ namespace chestionar_auto
             Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
-            var minutes = 26;
+            var minutes = 30;
             var start = DateTime.UtcNow; 
             form1.endTime = start.AddMinutes(minutes); 
             form1.tmrCountdown.Enabled = true;
