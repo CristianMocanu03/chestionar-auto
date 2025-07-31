@@ -15,7 +15,7 @@ namespace chestionar_auto
             InitializeComponent();
             askQuestion(questionNumber);
             totalQuestions= 26;
-            lblIntrebariRamase.Text = totalQuestions.ToString();
+            lblIntrebariRamase.Text = totalQuestions.ToString();  
           
 
         }
