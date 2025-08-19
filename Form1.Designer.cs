@@ -40,6 +40,8 @@
             lblIntrebariRamase = new Label();
             lblCorecte = new Label();
             lblGresite = new Label();
+            PbMasina = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)PbMasina).BeginInit();
             SuspendLayout();
             // 
             // lblIntrebare
@@ -150,11 +152,21 @@
             lblGresite.TabIndex = 13;
             lblGresite.Text = "Raspunsuri Gresite";
             // 
+            // PbMasina
+            // 
+            PbMasina.Image = Properties.Resources.poza_masina_mica4;
+            PbMasina.Location = new Point(138, 560);
+            PbMasina.Name = "PbMasina";
+            PbMasina.Size = new Size(62, 28);
+            PbMasina.TabIndex = 14;
+            PbMasina.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1028, 620);
+            Controls.Add(PbMasina);
             Controls.Add(lblGresite);
             Controls.Add(lblCorecte);
             Controls.Add(lblIntrebariRamase);
@@ -167,6 +179,7 @@
             Controls.Add(lblIntrebare);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)PbMasina).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,5 +197,6 @@
         private Label lblIntrebariRamase;
         private Label lblCorecte;
         private Label lblGresite;
+        private PictureBox PbMasina;
     }
 }

@@ -24,8 +24,6 @@ namespace chestionar_auto
             
         }
 
-
-
         private void btnInainte_Click(object sender, EventArgs e)
         {
             var senderObject = (Button)sender;
@@ -73,7 +71,15 @@ namespace chestionar_auto
             rbtVarianta2.Checked = false;
             rbtVarianta3.Checked = false;
             totalQuestions = totalQuestions - 1;
-            lblIntrebariRamase.Text = $"Numar intrebari ramase : {totalQuestions.ToString()}";
+            if (totalQuestions >= 1)
+            {
+                lblIntrebariRamase.Text = $"Numar intrebari ramase : {totalQuestions.ToString()}";
+            }
+            else
+            {
+                MessageBox.Show("Ai terminat examenul");
+            }
+            PbMasina.Left = PbMasina.Left + 27;
         }
 
 
@@ -87,8 +93,18 @@ namespace chestionar_auto
             rbtVarianta2.Checked = false;
             rbtVarianta3.Checked = false;
             totalQuestions = totalQuestions + 1;
-            lblIntrebariRamase.Text = $"Numar intrebari ramase : {totalQuestions.ToString()}";
+            if (totalQuestions <= 26)
+            {
+                lblIntrebariRamase.Text = $"Numar intrebari ramase : {totalQuestions.ToString()}";
+            }
+            else
+            {
+                MessageBox.Show("Asta e prima intrebare");
+            }
+            PbMasina.Left = PbMasina.Left - 27;
         }
+            
+           
         private void askQuestion(int qnum)
         {
             if (qnum < 1 || qnum > intrebari.Count)
